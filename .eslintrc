@@ -1,0 +1,63 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "babel",
+        "react",
+    ],
+    "rules": {
+        // Errors
+        "strict": 0,
+        "comma-dangle": [2, "always-multiline"],    // enforce trailing commas in multiline statements
+        "no-dupe-args": 2,                          // enforce no duplicate arguments
+        "no-dupe-keys": 2,                          // enforce no duplicate object keys
+        "no-duplicate-case": 2,                     // enforce no duplicate cases in switch statements
+        "no-ex-assign": 2,                          // enforce no re-assigning the error in a try/catch,
+        "no-irregular-whitespace": 2,               // enforce no irregular whitespace characters
+        "no-unreachable": 2,                        // enforce no unreachable statements after returns
+        "no-extend-native": 2,                      // enforce no extending native code
+        "no-fallthrough": 2,                        // enforce no case statement fallthrough
+        "no-throw-literal": 2,                      // enforce that we throw actual error objects
+        "vars-on-top": 2,                           // enforce that all vars are declared at the top
+        "array-bracket-spacing": 2,                 // enforce no extra spacing in brackets
+        "brace-style": 2,                           // enforce 1tbs bracket styles
+        "consistent-this": [2, "self"],             // enforce consistent this variable renaming
+        "eol-last": 2,                              // enforce newline at end of file
+        "new-parens": 2,                            // enforce using parens when invoking a constructor
+        "no-multiple-empty-lines": [2, {"max": 2}], // enforce no multple blank lines
+        "no-trailing-spaces": 2,                    // enforce no trailing spaces
+        "one-var": [2, "never"],                    // enforce one variable declaration per line
+        "padded-blocks": [2, "never"],              // enforce no padding in block statements
+        "spaced-comment": [2, "always"],            // enforce a space at the beginning of a comment
+        "arrow-spacing": 2,                         // enforce a single space before and after arrows
+        "no-const-assign": 2,                       // enforce no re-assigning a const
+        "no-var": 2,                                // enforce using let or const
+        "react/jsx-curly-spacing": 2,               // enforce no extraneous spacing in curlies
+        "react/jsx-no-duplicate-props": 2,          // enforce no duplicate props
+        "react/no-did-mount-set-state": 2,          // enforce no setting state in componentDidMount
+        "react/no-did-update-set-state": 2,         // enforce no setting state in componentDidUpdate
+        "react/no-unknown-property": 2,             // enforce not confusing jsx w/ html
+        "react/self-closing-comp": 2,               // enforce self-closing tags for components w/o children
+        "react/wrap-multilines": 2,                 // enforce render() returns wrapping jsx in parens
+
+        // Warnings
+        "no-cond-assign": [1, "except-parens"],     // warn if assingment in conditional statements
+        "no-constant-condition": 1,                 // warn if constant expressions in conditions
+        "no-empty": 1,                              // warn if empty block statement
+        "no-invalid-regexp": 1,                     // warn if invalid regular expression
+        "no-negated-in-lhs": 1,                     // warn if there is a negated left operand in "in" operator
+        "no-unexpected-multiline": 1,               // warn if a multiline statement will be treated as a single line statement
+        "default-case": 1,                          // warn if a case statement has no default
+        "eqeqeq": 1,                                // warn if using == instead of ===
+        "no-extra-bind": 1,                         // warn if unnecessarily using .bind
+        "no-param-reassign": 1,                     // warn if reassigning function parameters
+        "max-nested-callbacks": [1, 3],             // warn if too many nested callbacks
+        "constructor-super": 1,                     // warn if missing super call in constructor
+        "react/no-multi-comp": 1,                   // warn if creating multiple React components in one file
+        "react/react-in-jsx-scope": 1,              // warn if react isn't imported when using jsx
+
+        // Helpers
+        "react/jsx-uses-react": 1,                  // fix eslint messing up with jsx
+        "react/jsx-no-undef": 1,                    // fix eslint messing up with jsx
+        "react/jsx-uses-vars": 1,                   // fix eslint messing up with jsx
+    }
+}
