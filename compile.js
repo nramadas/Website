@@ -32,6 +32,10 @@ var compiler = webpack({
             test: /\.js/,
             exclude: /(node_modules)/,
             loader: "eslint-loader",
+        }, {
+            test: /\.js/,
+            exclude: /(node_modules)/,
+            loader: "../flowLoader",
         }],
     },
     devtool: "source-map",
@@ -42,6 +46,8 @@ if (argv.watch) {
     compiler.watch({}, function(err, stats) {
         console.log(stats.toString({
             colors: true,
+            chunks: false,
+            version: false,
         }));
     });
 } else {
