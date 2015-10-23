@@ -39,6 +39,13 @@ var compiler = webpack({
         }],
     },
     devtool: "source-map",
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            },
+        }),
+    ],
 });
 
 if (argv.watch) {
