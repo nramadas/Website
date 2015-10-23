@@ -1,9 +1,30 @@
 <!doctype html>
 <html>
     <head>
+        <title>Niranjan Ramadas</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800|Gentium+Book+Basic:400,800' rel='stylesheet' type='text/css'>
+        <link href="/static/css/font-awesome.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: "Open Sans", sans-serif;
+            }
 
+            #container {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        </style>
     </head>
     <body>
-
+        <div id="container"></div>
+        <script src="/static/bin/App.js"></script>
+        <script>
+            document.body.onload = function() {
+                window.createApp(document.getElementById("container"));
+            }
+        </script>
     </body>
 </html>
