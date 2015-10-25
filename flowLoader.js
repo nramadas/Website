@@ -36,7 +36,7 @@ module.exports = function(source, map) {
     if (!callback) {
         return source;
     } else {
-        child_process.exec("./flowosx --json", function(err, stdout, stderr) {
+        child_process.exec("./flowlinux --json", function(err, stdout, stderr) {
             var flowOutput = JSON.parse(stdout);
             if (flowOutput.passed) {
                 callback(null, source);
